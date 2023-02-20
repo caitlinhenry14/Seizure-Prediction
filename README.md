@@ -10,5 +10,7 @@ CNN + LSTM (Python)
 
 ## Project Execution
 To run the project, first download the repository and run `pip3 install -r requirements.txt`. 
+
 Train the model by running `python3 seizure_prediction.py -- mode train`. 
+
 Test the model by running `python3 seizure_prediction.py -- mode test`.
