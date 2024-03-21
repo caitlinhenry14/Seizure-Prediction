@@ -1,34 +1,3 @@
-"""
-    This script contains the code for training and testing a CNN + LSTM model on EEG data.
-    This script requires the data to be preprocessed beforehand.
-    If FLAGS.mode = train, the program will train the model
-        - The  program expects the training data to reside in individual folders for each patient under Data/Preprocessed
-        in the current working directory. See function read_files()
-        - The program creates a list of filenames for all training data and creates a dictionary of labels corresponding
-        to each file name. These are used by the DataGenerator class to create batches of data.
-        - The training data is split into training and validation sets based on Flags.train_percentage. Default split is
-        75-25
-        - The network is trained and the model is saved in FLAGS.Model_Dir
-        - to view Tensorboard files, enter in command window:
-            tensorboard --logdir /path/to/logfiles
-            Log file path is set using FLAGS.log_dir
-    If FLAGS.mode = test, the program will find the accuracy on the test data
-        - The test routine requires the preprocessed data and requires all the files under one folder.
-        It reuires the all the test files to be under Data/Preprocessed/Testing_Data in the current working directory
-        check function get_test_data() to change paths
-        - The program reads the given CSV file (see function get_test_data() for paths)
-        - The csv file contains the list of files that are private set and public test set. The program only fetches the
-        public test data and their labels.
-        - The program creates a list of filenames for all training data and creates a dictionary of labels corresponding
-        to each file name. These are used by the DataGenerator class to create batches of data.
-        - The program will evaluate the model on the entire test set and display the accuracy
-    ---
-    Part of Seizure Prediction Project for the
-    final project of ECGR 6119 Applied AI
-    Abhijith Bagepalli
-    UNC Charlotte
-    May '19
-"""
 import os
 import csv
 import numpy as np
