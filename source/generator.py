@@ -1,15 +1,3 @@
-"""
-    This script contains a custom data generator class that tf.keras calls in its fit function.
-    Instead of reading the entire data to memory, it loads a batch of data, trains on the batch
-    and loads the next batch till one epoch is complete
-
-    ---
-    Part of Seizure Prediction Project for the
-    final project of ECGR 6119 Applied AI
-    Abhijith Bagepalli
-    UNC Charlotte
-    May '19
-"""
 import numpy as np
 import h5py
 import tensorflow as tf
