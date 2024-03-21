@@ -1,15 +1,4 @@
 
-%     This script preprocesses the EEG signals. It first denoises the signals using wavelet transform
-%     and then reduces the sampling rate by decimating the signal
-%     The script also splits the 10 minute long sequence into 15
-%     sequeneces. The new matrix is now a 4D array with size 15, 16, 3200, 1
-%     ---
-%     Part of Seizure Prediction Project for the
-%     final project of ECGR 6119 Applied AI
-%     Abhijith Bagepalli
-%     UNC Charlotte
-%     May '19
-
 %%
 close all;
 clear;
